@@ -17,7 +17,7 @@
 $primary-color: color("yellow", "base") !default;
 $secondary-color: color("pink", "base") !default;
 $navbar-font-color: color("grey","darken-4") !default;
-$input-border-color: color("purple","base") !default;
+$input-border-color: $secondary-color !default;
 @import "materialize";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
@@ -28,3 +28,14 @@ li.tab > a {
 #tabsdiv {
 	padding-left:40px;
 }
+
+
+ body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
