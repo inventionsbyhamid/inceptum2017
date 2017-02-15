@@ -2,42 +2,53 @@
   <title>Sign Up - Inceptum</title>
 <% end %>
 
-<h2>Sign up</h2>
+<div class = "row">
+  <div class = "col s12 l4 offset-l4">
+    <div class = "card-panel" >
+    <div class="center-align">
+     <a href="<%= root_path %>"><i class="material-icons medium">home</i></a>
+      <h4 class="pink-text">Sign up</h4>
+      </div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :full_name %><br />
+  <div class="input-field">
+      <i class="material-icons prefix">account_circle</i>
     <%= f.text_field :full_name, autofocus: true, required: true %>
+    <%= f.label :full_name %>
   </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
+  <div class="input-field">
+    <i class="material-icons prefix">email</i>
+    <%= f.label :email %>
     <%= f.email_field :email, required: true%>
   </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
+  <div class="input-field">
+  <i class="material-icons prefix">lock</i>
+    <%= f.label "Password (6 characters minimum)" %>
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
+  <div class="input-field">
+  <i class="material-icons prefix">lock</i>
+    <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
-    <div class="field">
-    <%= f.label :contact %><br />
+  <div class="input-field">
+    <i class="material-icons prefix">phone</i>
     <%= f.phone_field :contact, required: true %>
+    <%= f.label :contact %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+  <div class="actions center-align">
+    <%= f.submit "Sign up", class: "btn" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>

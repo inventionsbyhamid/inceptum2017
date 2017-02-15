@@ -13,6 +13,18 @@
  *= require_tree .
  *= require_self
  */
-
+@import "materialize/components/color";
+$primary-color: color("yellow", "base") !default;
+$secondary-color: color("pink", "base") !default;
+$navbar-font-color: color("grey","darken-4") !default;
+$input-border-color: color("purple","base") !default;
 @import "materialize";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+li.tab > a {
+	color: black !important;
+}
+
+#tabsdiv {
+	padding-left:40px;
+}

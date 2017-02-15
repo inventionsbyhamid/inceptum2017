@@ -34,7 +34,7 @@ gem 'materialize-sass'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-gem 'bcrypt', '~> 3.1.7', platforms: [:ruby]
+gem 'bcrypt', '~> 3.1.11', platforms: [:ruby]
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
