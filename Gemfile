@@ -29,10 +29,11 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise', '~> 4.2'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
+gem 'puma-heroku'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7', platforms: [:ruby]
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
