@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>Sign Up | Inceptum - 2017</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="/favicon.png">
+
+    <meta name="title" content="Inceptum - Technical fest of GBPEC"/>
+    <meta name="description" content="Inceptum is the annual techfest of GB Pant Engineering College, New Delhi." />
+    <meta name="keywords" content="inceptum, gbpec inceptum, inceptum 2017, gbpec, gbpec fest" />
+
+    <meta name="robots" content="index, follow"/>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body style="background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);">
+ 
+    <%= yield %>
+
+  <% unless flash.empty? %>
+  <script>
+  	<% if flash.notice %>
+  	Materialize.toast('<%=flash.notice%>',5000);
+  	<% else %>
+  	Materialize.toast('<%=flash.alert%>',5000);
+  	<% end %>
+  </script>
+  <% end %>
+
+  </body>
+</html>
