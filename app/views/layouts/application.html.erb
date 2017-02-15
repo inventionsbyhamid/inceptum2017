@@ -1,7 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Inceptum2017</title>
+    <% if content_for?(:title) %>
+      	<%= yield :title %>
+  	<% else %>
+  		<title>Inceptum - 2017</title>
+  	<% end %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="/favicon.png">
+    
+    <% if content_for?(:meta_site) %>
+      <%= yield :meta_site %>
+    <% else %>
+    <meta name="title" content="Inceptum - Technical fest of GBPEC"/>
+    <meta name="description" content="Inceptum is the annual techfest of GB Pant Engineering College, New Delhi." />
+    <meta name="keywords" content="inceptum, gbpec inceptum, inceptum 2017, gbpec, gbpec fest" />
+    <% end %>
+
+    <meta name="robots" content="index, follow"/>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>

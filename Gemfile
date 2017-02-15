@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.2'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'puma-heroku'
+gem 'materialize-sass'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
