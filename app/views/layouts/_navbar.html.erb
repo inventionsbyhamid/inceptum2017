@@ -5,10 +5,19 @@
             <object id="front-page-logo" type="image/svg+xml" data="/materialize.svg">Your browser does not support SVG</object></a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <% if !user_signed_in? %>
         <li><a href="<%= new_user_session_path %>"><i class="material-icons right">send</i>Login</a></li>
+        <% else %>
+        <li><a href = "<%= destroy_user_session_path %>" data-method="delete" rel="nofollow"><i class="material-icons right">mood_bad</i>Logout</a></li>
+        <% end %>
       </ul>
       <ul class="side-nav" id="mobile-demo">
+        <% if !user_signed_in? %>
         <li><a href="<%= new_user_session_path %>"><i class="material-icons right">send</i>Login</a></li>
+        <% else %>
+        <li><a href = "<%= destroy_user_session_path %>" data-method="delete" rel="nofollow"><i class="material-icons right">mood_bad</i>Logout</a></li>
+        <% end %>
+
       </ul>
     </div>
     <br>
