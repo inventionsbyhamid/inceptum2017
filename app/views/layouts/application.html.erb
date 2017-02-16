@@ -26,10 +26,12 @@
 
   <body>
   <%= render partial: "layouts/navbar" %>
-  <main>
+  
     <%= yield %>
   </main>
+  
   <%= render partial: "layouts/footer" %>
+  
   
 
   <% unless flash.empty? %>
