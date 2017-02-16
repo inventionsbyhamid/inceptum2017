@@ -18,6 +18,8 @@ $primary-color: color("yellow", "base") !default;
 $secondary-color: color("pink", "base") !default;
 $navbar-font-color: color("grey","darken-4") !default;
 $input-border-color: $secondary-color !default;
+$sidenav-font-size: 18px !default;
+$sidenav-padding: 20px !default;
 @import "materialize";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
