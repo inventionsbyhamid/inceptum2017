@@ -1,0 +1,43 @@
+<%= form_for(event) do |f| %>
+  <% if event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="input-field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="input-field">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: "materialize-textarea" %>
+  </div>
+
+  <div class="input-field">
+    <%= f.label :rules %>
+    <%= f.text_area :rules, class: "materialize-textarea" %>
+  </div>
+
+  <div class="input-field">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+
+  <div class="input-field">
+    <%= f.label :date_time %>
+    <%= f.text_field :date_time %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Create Event", class: "btn" %>
+  </div>
+  <br>
+<% end %>
