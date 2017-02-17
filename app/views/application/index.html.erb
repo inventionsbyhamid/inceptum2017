@@ -13,58 +13,14 @@
   <div id="about" class="col s12">About
   </div>
   <div id="test1" class="col s12">
-  	<div class = "row">
-  		<div class =" col m2 s12">
-  			<h5 class ="grey-text text-darken-2">March 1</h5>
-  		</div>
-  		<div class = "col m10 s12">
-        <% @day1.try(:each) do |event| %>
-          <a href = "<%= event_path(event) %>" data-remote = "true" data-method = "get" data-turbolinks="false">
-  				<div class="divider"></div>
-  				<br>
-  				<h5 class = "grey-text text-darken-2" style="margin-bottom:4px"><%= event.title %></h5>
-  				<span class="grey-text"><%= event.date_time %> | <%= event.location %></span><br><br>
-          </a>
-  				<div class="divider"></div>
-        <% end %>
-  		</div>
-  	</div>
+  	<%= render "application/tab_div", :day => @day1 %>
   </div>
   <div id="test2" class="col s12">
-  <div class = "row">
-      <div class =" col m2 s12">
-        <h5 class ="grey-text text-darken-2">March 2</h5>
-      </div>
-      <div class = "col m10 s12">
-        <% @day2.try(:each) do |event| %>
-          <a href = "<%= event_path(event) %>" data-remote = "true" data-method = "get" data-turbolinks="false">
-          <div class="divider"></div>
-          <br>
-          <h5 class = "grey-text text-darken-2" style="margin-bottom:4px"><%= event.title %></h5>
-          <span class="grey-text"><%= event.date_time %> | <%= event.location %></span><br><br>
-          </a>
-          <div class="divider"></div>
-        <% end %>
-      </div>
-    </div>
+    <%= render "application/tab_div", :day => @day2 %>
   </div>
   <div id="test3" class="col s12">
-     <div class = "row">
-      <div class =" col m2 s12">
-        <h5 class ="grey-text text-darken-2">March 3</h5>
-      </div>
-      <div class = "col m10 s12">
-        <% @day3.try(:each) do |event| %>
-          <a href = "<%= event_path(event) %>" data-remote = "true" data-method = "get" data-turbolinks="false">
-          <div class="divider"></div>
-          <br>
-          <h5 class = "grey-text text-darken-2" style="margin-bottom:4px"><%= event.title %></h5>
-          <span class="grey-text"><%= event.date_time %> | <%= event.location %></span><br><br>
-          </a>
-          <div class="divider"></div>
-        <% end %>
-      </div>
-    </div>
+     <%= render "application/tab_div", :day => @day3 %>
   </div>
 </div>
+
 <div id ="modal-holder" data-turbolinks="false"></div>
