@@ -1,2 +1,5 @@
-$('body').append('<%= escape_javascript(render '/events/modal_event')  %>');
-$('#modal1').modal().modal('open');
+$('#modal-holder').html("");
+$('#modal-holder').html('<%= escape_javascript(render('/events/modal_event'))  %>');
+$('.modal-overlay').remove();
+$('#modal1').modal('close');
+$('#modal1').modal({complete: function() { $('#modal-holder').html(""); }} ).modal('open');
