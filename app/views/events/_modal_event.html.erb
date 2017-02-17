@@ -4,6 +4,14 @@
       <p><%= simple_format @event.description %></p>
     </div>
     <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Register</a>
+    <% if !current_user %>
+      <%= button_to 'Register', {:controller => "events", :action => "register"} , :method=>:post, class: "modal-action modal-close waves-effect waves-green btn-flat", remote: "true" %>
+    <% else %>
+    	<% if @event.users.exists?(current_user) %>
+    		<%= button_to 'Unregister', {:controller => "events", :action => "unregister"} , :method=>:post, class: "modal-action modal-close waves-effect waves-green btn-flat", remote: "true" %>
+    	<% else %>
+    		<%= button_to 'Register', {:controller => "events", :action => "register"} , :method=>:post, class: "modal-action modal-close waves-effect waves-green btn-flat", remote: "true" %>
+    	<% end %>
+    <% end %>
     </div>
   </div>

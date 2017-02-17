@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :set_event, only: [:show, :edit, :update, :destroy, :register, :unregister]
 
   before_action :authenticate_user!, except: [:show]
 
@@ -8,6 +8,26 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.all
+  end
+
+  def register
+    @event.users << current_user
+    @event.save
+    #flash[:notice] = "Successfully registered for #{@event.title}"
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def unregister
+    user_to_be_removed = @event.users.find(current_user)
+    if user_to_be_removed
+      @event.users.delete(user_to_be_removed)
+    end
+    #flash[:notice] = "Unregistered for #{@event.title}"
+    respond_to do |format|
+      format.js
+    end
   end
 
   # GET /events/1
