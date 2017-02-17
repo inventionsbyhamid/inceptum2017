@@ -4,21 +4,29 @@ class ApplicationController < ActionController::Base
 
   layout :layout_by_resource
 
+  before_action :set_days, only: [:index]
+
   protected
 
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:full_name, :email, :password, :password_confirmation, :contact])
-  end
+	  def configure_permitted_parameters
+	    devise_parameter_sanitizer.permit(:sign_up, keys: [:full_name, :email, :password, :password_confirmation, :contact])
+	  end
 
-  def layout_by_resource
-    if devise_controller? && resource_name == :user && action_name == 'new'
-      "devise"
-    else
-      "application"
-    end
-  end
+	  def layout_by_resource
+	    if devise_controller? && resource_name == :user && action_name == 'new'
+	      "devise"
+	    else
+	      "application"
+	    end
+	  end
+
+	  def set_days
+	  	@day1 = Event.where(:day => 1)
+	  	@day2 = Event.where(:day => 2)
+	  end
 
   def index
+  	
   end
 
 end
