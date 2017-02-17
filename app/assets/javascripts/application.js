@@ -19,3 +19,9 @@
 document.addEventListener("turbolinks:load", function() {
   $(".button-collapse").sideNav();
 })
+
+$(document).ajaxError(function (e, xhr, settings) {
+        if (xhr.status == 401) {
+           Materialize.toast("You need to be logged in to register for any event.", 4000);
+        }
+    });
