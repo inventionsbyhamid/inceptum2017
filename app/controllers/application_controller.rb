@@ -23,6 +23,7 @@ class ApplicationController < ActionController::Base
 	  def set_days
 	  	@day1 = Event.where(:day => 1)
 	  	@day2 = Event.where(:day => 2)
+	  	@day3 = Event.where(:day => 3)
 	  end
 
   def index
