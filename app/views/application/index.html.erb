@@ -19,7 +19,7 @@
   		</div>
   		<div class = "col m10 s12">
         <% @day1.try(:each) do |event| %>
-          <a href = "#">
+          <a href = "<%= event_path(event) %>" data-remote = "true" data-method = "get" data-target="modal1">
   				<div class="divider"></div>
   				<br>
   				<h5 class = "grey-text" style="margin-bottom:4px"><%= event.title %></h5>
@@ -37,7 +37,7 @@
       </div>
       <div class = "col m10 s12">
         <% @day2.try(:each) do |event| %>
-          <a href = "#">
+          <a href = "<%= event_path(event) %>">
           <div class="divider"></div>
           <br>
           <h5 class = "grey-text" style="margin-bottom:4px"><%= event.title %></h5>
@@ -55,7 +55,7 @@
       </div>
       <div class = "col m10 s12">
         <% @day3.try(:each) do |event| %>
-          <a href = "#">
+          <a href = "<%= event_path(event) %>">
           <div class="divider"></div>
           <br>
           <h5 class = "grey-text" style="margin-bottom:4px"><%= event.title %></h5>
@@ -67,3 +67,4 @@
     </div>
   </div>
 </div>
+<div id="modal-holder"></div>
