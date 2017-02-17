@@ -1,7 +1,11 @@
-  <div id="modal1" class="modal">
+  <div id="modal1" class="modal modal-fixed-footer">
     <div class="modal-content">
       <h4><%= @event.title %></h4>
+       <p><i class="material-icons left">schedule</i><b><%= @event.date_time %></b></p>
+       <i class="material-icons left">room</i><b><%= @event.location %></b>
       <p><%= simple_format @event.description %></p>
+      <b>Rules</b>
+      <p><%= simple_format @event.rules %></p>
     </div>
     <div class="modal-footer">
     <% if !current_user %>
