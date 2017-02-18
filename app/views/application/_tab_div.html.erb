@@ -1,6 +1,6 @@
 <div class = "row">
 	<div class =" col m2 s12">
-		<h5 class ="grey-text text-darken-2">March 1</h5>
+		<h5 class ="grey-text text-darken-2"><%= date ||= "Day" %></h5>
 	</div>
 	<div class = "col m10 s12">
     <% day.try(:each) do |event| %>
