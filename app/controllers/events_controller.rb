@@ -100,7 +100,7 @@ class EventsController < ApplicationController
     end
 
     def verify_is_admin
-      if current_user.try(:admin?)
+      if !current_user.try(:admin?)
         flash[:alert] = "Access denied as you don't have required permissons."
         redirect_to root_path
       end
