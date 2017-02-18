@@ -4,13 +4,17 @@
         <li class="tab"><a href="#test1">Day 1</a></li>
         <li class="tab"><a href="#test2">Day 2</a></li>
         <li class="tab"><a href="#test3">Day 3</a></li>
+        <% if user_signed_in? %>
+        <li class="tab"><a href="#myschedule">My Events</a></li>
+        <% end %>
       </ul>
     </div>
   </nav>
 </header>
 <main>
 <div id="tabsdiv" class="yellow lighten-5">
-  <div id="about" class="col s12">About
+  <div id="about" class="col s12">
+    About
   </div>
   <div id="test1" class="col s12">
   	<%= render "application/tab_div", :day => @day1, :date => "March 1" %>
@@ -21,6 +25,11 @@
   <div id="test3" class="col s12">
      <%= render "application/tab_div", :day => @day3, :date => "March 3" %>
   </div>
+  <% if user_signed_in? %>
+  <div id = "myschedule" class ="col s12">
+    <%= render "application/tab_div", :day => @myevents, :date => "Registered Events" %>
+  </div>
+  <% end %>
 </div>
 
 <div id ="modal-holder" data-turbolinks="false"></div>

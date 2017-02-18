@@ -1,1 +1,2 @@
 Materialize.toast("<%= "Successfully registered for #{@event.title}" %>", 4000);
+$('#myschedule').find('#event_div').append('<%= escape_javascript(render('/events/event_row', :event => @event))  %>');

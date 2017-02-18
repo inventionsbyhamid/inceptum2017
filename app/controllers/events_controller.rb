@@ -3,7 +3,7 @@ class EventsController < ApplicationController
 
   before_action :authenticate_user!, except: [:show]
 
-  before_filter :verify_is_admin, except: [:show]
+  before_filter :verify_is_admin, except: [:show, :register, :unregister]
   # GET /events
   # GET /events.json
   def index
