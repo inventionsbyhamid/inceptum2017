@@ -1,4 +1,14 @@
-<h2>Forgot your password?</h2>
+<%= content_for(:title) do %>
+  <title>Forgot Password - Inceptum</title>
+<% end %>
+<br><br>
+<div class = "row">
+  <div class = "col s12 l4 offset-l4">
+    <div class = "card-panel" >
+    <div class="center-align">
+     <a href="<%= root_path %>"><i class="material-icons medium yellow-text">home</i></a>
+      <h4 class="pink-text">Forgot your password?</h4>
+      </div>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= devise_error_messages! %>
@@ -9,8 +19,12 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+    <%= f.submit "Send me reset password instructions", class: "btn" %>
   </div>
 <% end %>
-
+<br>
 <%= render "devise/shared/links" %>
+<br>
+</div>
+</div>
+</div>

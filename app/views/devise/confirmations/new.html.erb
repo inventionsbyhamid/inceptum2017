@@ -1,4 +1,14 @@
-<h2>Resend confirmation instructions</h2>
+<%= content_for(:title) do %>
+  <title>Resend Confirmation - Inceptum</title>
+<% end %>
+<br><br>
+<div class = "row">
+  <div class = "col s12 l4 offset-l4">
+    <div class = "card-panel" >
+    <div class="center-align">
+     <a href="<%= root_path %>"><i class="material-icons medium yellow-text">home</i></a>
+      <h4 class="pink-text">Resend confirmation instructions?</h4>
+      </div>
 
 <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
   <%= devise_error_messages! %>
@@ -9,8 +19,9 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Resend confirmation instructions" %>
+    <%= f.submit "Resend confirmation instructions", class: "btn" %>
   </div>
 <% end %>
-
+<br>
 <%= render "devise/shared/links" %>
+<br>

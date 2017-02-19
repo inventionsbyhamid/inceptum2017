@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <% if content_for?(:title) %>
+        <%= yield :title %>
+    <% else %>
   	<title>Sign Up | Inceptum - 2017</title>
+    <% end %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="icon" href="/favicon.png">
 
