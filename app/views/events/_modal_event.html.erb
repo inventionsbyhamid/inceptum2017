@@ -8,7 +8,7 @@
       <p><%= simple_format @event.rules %></p>
     </div>
     <div class="modal-footer">
-    <% if !current_user %>
+    <% if !user_signed_in? %>
       <%= button_to 'Register', {:controller => "events", :action => "register"} , :method=>:post, class: "modal-action modal-close waves-effect waves-green btn-flat", remote: "true" %>
     <% else %>
     	<% if @event.users.exists?(current_user) %>
@@ -16,6 +16,9 @@
     	<% else %>
     		<%= button_to 'Register', {:controller => "events", :action => "register"} , :method=>:post, class: "modal-action modal-close waves-effect waves-green btn-flat", remote: "true" %>
     	<% end %>
+      <% if current_user.try(:admin?) %>
+        <%= button_to 'Get Users', {:controller => "events", :action => "csv"} , :method=>:get, class: "modal-action modal-close waves-effect waves-green btn-flat" %>
+      <% end %>
     <% end %>
     </div>
   </div>

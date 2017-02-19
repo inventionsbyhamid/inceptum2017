@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: [:show, :edit, :update, :destroy, :register, :unregister]
+  before_action :set_event, only: [:show, :edit, :update, :destroy, :register, :unregister, :csv]
 
   before_action :authenticate_user!, except: [:show]
 
@@ -10,6 +10,7 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
+  # Register the current logged in user for an event
   def register
     @event.users << current_user
     @event.save
@@ -19,6 +20,7 @@ class EventsController < ApplicationController
     end
   end
 
+  # Unregister the current logged in user for an event
   def unregister
     user_to_be_removed = @event.users.find(current_user)
     if user_to_be_removed
@@ -28,6 +30,10 @@ class EventsController < ApplicationController
     respond_to do |format|
       format.js
     end
+  end
+
+  def csv
+    send_data @event.to_csv(), filename: "#{@event.title}-#{Date.today}.csv"
   end
 
   # GET /events/1
