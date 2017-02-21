@@ -1,7 +1,7 @@
 <header>
   <nav class="nav-extended">
     <div class="nav-wrapper" style="padding:10px 45px 0 45px">
-      <a id="logo-container" href="<%= root_path %>" class="brand-logo" style="padding-top:10px">
+      <a id="logo-container" href="<%= root_path %>" class="brand-logo" style="padding-top:8px">
             <object id="front-page-logo" type="image/svg+xml" data="/materialize.svg">Your browser does not support SVG</object></a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -20,4 +20,17 @@
 
       </ul>
     </div>
-    <br>
+    
+    <div class="nav-content" style="padding-left:30px">
+      <ul class="tabs tabs-transparent">
+        <li class="tab"><a class="active" href="#about">About</a></li>
+        <li class="tab"><a href="#test1">Day 1</a></li>
+        <li class="tab"><a href="#test2">Day 2</a></li>
+        <li class="tab"><a href="#test3">Day 3</a></li>
+        <% if user_signed_in? %>
+        <li class="tab"><a href="#myschedule">My Events</a></li>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+</header>
