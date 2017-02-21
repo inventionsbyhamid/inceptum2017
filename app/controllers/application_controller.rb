@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
 	  end
 
 	  def layout_by_resource
-	    if devise_controller? && resource_name == :user && action_name == 'new'
+	    if devise_controller? && resource_name == :user
 	      "devise"
 	    else
 	      "application"
