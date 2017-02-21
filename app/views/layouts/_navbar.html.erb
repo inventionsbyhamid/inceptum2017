@@ -1,14 +1,13 @@
 <header>
   <nav class="nav-extended">
     <div class="nav-wrapper" style="padding:10px 45px 0 45px">
-      <a id="logo-container" href="<%= root_path %>" class="brand-logo" style="padding-top:8px">
-            <object id="front-page-logo" type="image/svg+xml" data="/materialize.svg">Your browser does not support SVG</object></a>
+      
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <% if !user_signed_in? %>
-        <li><a href="<%= new_user_session_path %>"><i class="material-icons right">send</i>Login</a></li>
+        <li><a href="<%= new_user_session_path %>" class="white-text"><i class="material-icons right">send</i>Login</a></li>
         <% else %>
-        <li><a href = "<%= destroy_user_session_path %>" data-method="delete" rel="nofollow"><i class="material-icons right">mood_bad</i>Logout</a></li>
+        <li><a href = "<%= destroy_user_session_path %>" data-method="delete" rel="nofollow" class="white-text"><i class="material-icons right">mood_bad</i>Logout</a></li>
         <% end %>
       </ul>
       <ul class="side-nav" id="mobile-demo">
@@ -20,7 +19,16 @@
 
       </ul>
     </div>
-    
+    <div class="center">
+      <h2 class="white-text" style="font-weight:200">INCEPTUM 2017</h2>
+      <h5 class="grey-text text-lighten-3" style="font-weight:200">Annual Technical Fest of GB Pant Engineering College, New Delhi.</h5>
+      <h5 class="grey-text text-lighten-3" style="font-weight:300"><i class="material-icons medium" style="display:inline">date_range</i> March 1 - 3&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons medium" style="display:inline">room</i> Near Govindpuri Metro Station</h5>
+      <% if !user_signed_in? %>
+      <a class="waves-effect waves-light btn" href="<%= new_user_registration_path %>">Register</a>
+      <% else %>
+      <a class="waves-effect waves-light btn">Holla, <%=current_user.full_name%>!</a>
+      <% end %>
+    </div>
     <div class="nav-content" style="padding-left:30px">
       <ul class="tabs tabs-transparent">
         <li class="tab"><a class="active" href="#about">About</a></li>
