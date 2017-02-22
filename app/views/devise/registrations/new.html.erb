@@ -2,13 +2,9 @@
   <title>Sign Up - Inceptum</title>
 <% end %>
 
-<div class = "row">
-  <div class = "col s12 l4 offset-l4">
-    <div class = "card-panel" >
-    <div class="center-align">
-     <a href="<%= root_path %>"><i class="material-icons medium light-blue-text">home</i></a>
-      <h4 class="light-blue-text text-accent-2">Sign up</h4>
-      </div>
+<%= content_for(:card_title) do %>
+  Sign Up
+<% end %>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -49,6 +45,3 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
-    </div>
-  </div>
-</div>

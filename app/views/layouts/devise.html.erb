@@ -22,7 +22,22 @@
 
   <body style="background-image: linear-gradient(to right, #00c6ff 0%, #00bcd4 100%);">
   <main>
-    <%= yield %>
+  <div class = "row">
+    <div class = "col s12 l4 offset-l4">
+      <br>
+      <div class = "card-panel" >
+        <div class="center-align">
+          <a href="<%= root_path %>"><i class="material-icons medium light-blue-text">home</i></a>
+          <h4 class="light-blue-text text-accent-3">
+          <% if content_for?(:card_title) %>
+            <%= yield :card_title %>
+          <% end %>
+          </h4>
+        </div>
+        <%= yield %>
+      </div>
+    </div>
+  </div>
   </main>
   <% unless flash.empty? %>
   <script>
