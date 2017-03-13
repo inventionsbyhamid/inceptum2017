@@ -4,8 +4,10 @@
      <p><i class="material-icons left">schedule</i><b><%= @event.date_time %></b></p>
      <i class="material-icons left">room</i><b><%= @event.location %></b>
     <p><%= simple_format @event.description %></p>
+    <% if @event.rules.present? %>
     <b>Rules</b>
     <p><%= simple_format @event.rules %></p>
+    <% end %>
   </div>
   <div class="modal-footer">
     <% if !user_signed_in? %>

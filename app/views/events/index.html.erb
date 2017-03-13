@@ -7,6 +7,7 @@
   <thead>
     <tr>
       <th>Title</th>
+      <th>Day</th>
       <th>Description</th>
       <th>Rules</th>
       <th>Location</th>
@@ -19,8 +20,9 @@
     <% @events.each do |event| %>
       <tr>
         <td><%= event.title %></td>
-        <td><%= event.description %></td>
-        <td><%= event.rules %></td>
+        <td><%= event.day %></td>
+        <td><%= truncate(event.description, :length => 50, :omission => "...(continued)") %></td>
+        <td><%= truncate(event.rules, :length => 50, :omission => "...(continued)") %></td>
         <td><%= event.location %></td>
         <td><%= event.date_time %></td>
         <td><%= link_to 'Show', event %></td>
