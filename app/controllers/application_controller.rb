@@ -21,9 +21,9 @@ class ApplicationController < ActionController::Base
 	  end
 
 	  def set_days
-	  	@day1 = Event.where(:day => 1)
-	  	@day2 = Event.where(:day => 2)
-	  	@day3 = Event.where(:day => 3)
+	  	@day1 = Event.where(:day => 1).order("created_at asc")
+	  	@day2 = Event.where(:day => 2).order("created_at asc")
+	  	@day3 = Event.where(:day => 3).order("created_at asc")
 	  	if user_signed_in?
 	  		@myevents = current_user.events
 	  	end
