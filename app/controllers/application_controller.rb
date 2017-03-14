@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
 	  	@day2 = Event.where(:day => 2).order("created_at asc")
 	  	@day3 = Event.where(:day => 3).order("created_at asc")
 	  	if user_signed_in?
-	  		@myevents = current_user.events
+	  		@myevents = current_user.events.order("day asc")
 	  	end
 	  end
 
