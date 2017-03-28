@@ -1,24 +1,11 @@
-# README
+# Inceptum 2017
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<b>INCEPTUM</b> is the Techno-Cultural Festival of G.B.Pant Engineering College, Delhi. The aim of INCEPTUM has always been, to foster scientific temperament among students through different means and to cater to all kinds of talent.
 
-Things you may want to cover:
+Features:
+* User registration
+* Admin Users
+* Event Management(new, edit, update, delete) by admin users
+* Downloading csv of registered users for an event by admin users
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Instructions to create a similar website for your college fest will be added soon.
