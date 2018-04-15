@@ -174,7 +174,7 @@ DEPENDENCIES
   figaro (~> 1.1, >= 1.1.1)
   jbuilder (~> 2.5)
   jquery-rails
-  materialize-sass
+  materialize-sass (= 0.98.1)
   pg (~> 0.18)
   puma (~> 3.0)
   puma-heroku
@@ -187,4 +187,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.14.6
+   1.16.1
