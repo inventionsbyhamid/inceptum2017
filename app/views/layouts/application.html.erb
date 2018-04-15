@@ -4,7 +4,7 @@
     <% if content_for?(:title) %>
       	<%= yield :title %>
   	<% else %>
-  		<title>Inceptum - 2017</title>
+  		<title>Inceptum - 2018</title>
   	<% end %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="icon" href="/favicon.ico">
@@ -12,19 +12,19 @@
     <% if content_for?(:meta_site) %>
       <%= yield :meta_site %>
     <% else %>
-    <meta name="title" content="Inceptum | Techno-Cultural fest of GBPEC"/>
-    <meta name="description" content="Inceptum is the annual techno-cultural fest of GB Pant Engineering College, New Delhi." />
-    <meta name="keywords" content="inceptum, gbpec inceptum, inceptum 2017, gbpec, gbpec fest, gbpec techfest" />
+    <meta name="title" content="Inceptum | Technical fest of GBPEC"/>
+    <meta name="description" content="Inceptum is the annual technical  fest of GB Pant Engineering College, New Delhi." />
+    <meta name="keywords" content="inceptum, gbpec inceptum, inceptum 2018, gbpec, gbpec fest, gbpec techfest" />
     <% end %>
 
     <% if content_for?(:meta_og) %>
       <%= yield :meta_og %>
     <% else %>
-      <meta property="og:title" content="Inceptum | Techno-Cultural fest of GBPEC" />
+      <meta property="og:title" content="Inceptum | Technical fest of GBPEC" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="http://gbpec.org"/>
       <meta property="og:site_name" content="Inceptum"/>
-      <meta property="og:description" content="Inceptum is the annual techno-cultural fest of GB Pant Engineering College, New Delhi."/>
+      <meta property="og:description" content="Inceptum is the annual technical fest of GB Pant Engineering College, New Delhi."/>
       <meta property="og:image" content='<%= image_url("meta_img.png") %>'/>
     <% end %>
 

@@ -13,12 +13,12 @@
 
   <div class="input-field">
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, required: :required %>
   </div>
 
   <div class="input-field">
     <%= f.label :description %>
-    <%= f.text_area :description, class: "materialize-textarea" %>
+    <%= f.text_area :description, class: "materialize-textarea", required: :required  %>
   </div>
 
   <div class="input-field">
@@ -28,17 +28,17 @@
 
   <div class="input-field">
     <%= f.label :location %>
-    <%= f.text_field :location %>
+    <%= f.text_field :location, required: :required  %>
   </div>
 
   <div class="input-field">
     <%= f.label :date_time %>
-    <%= f.text_field :date_time %>
+    <%= f.text_field :date_time, required: :required  %>
   </div>
 
   <div class="input-field">
     <%= f.label :day %>
-    <%= f.number_field :day %>
+    <%= f.number_field :day, required: :required  %>
   </div>
 
   <div class="actions">
