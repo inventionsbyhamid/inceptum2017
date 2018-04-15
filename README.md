@@ -1,4 +1,4 @@
-# Inceptum 2017
+# Inceptum 2018
 
 <b>INCEPTUM</b> is the Techno-Cultural Festival of G.B.Pant Engineering College, Delhi. The aim of INCEPTUM has always been, to foster scientific temperament among students through different means and to cater to all kinds of talent.
 
