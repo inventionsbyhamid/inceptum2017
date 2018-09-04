@@ -85,7 +85,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   #Mail setup
-  config.action_mailer.default_url_options = { host: 'https://inceptum2017.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'https://inceptum2018.herokuapp.com' }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_options = {from: 'Inceptum <no-reply@gpec.edu.in>'}
